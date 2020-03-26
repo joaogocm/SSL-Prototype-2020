@@ -1,0 +1,587 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">08/03/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11:33:05</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc" class="file"><acronym title="D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc">D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">81</td></tr>
+</table>
+</td>
+</table><a name="ID54FN4JGEOBXBE4JXAF32YM14BMS4FBJXOQQOHTFTXQ3FDPCOYROE"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHJ3CYLMHIWMKN4BKKKV0GT04PLYNA42JFICEMP1K3ERSFE1103C">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCHFWNCSPO3EEKIYM2M0EP2NPDOVKN3ER2O2YLEEQL2JOEE1WODMD">Clearance Constraint (Gap=0.508mm) (InNetClass('Power')),(InNet('GND'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDS5SF3VW0MYCMMUAF1UL4FJ15NEP3BOSJMJXNRAF4VETIT4RLYJAI">Clearance Constraint (Gap=0.508mm) (InNet('VBAT')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBNTI4EZEJOXEJYOBJYD3DGPTQMR4RLYAICASIVDSENF2HWHBB0WF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB3W15H4TCFOHLST4DEYQ2NLECCHXZCAEHXSXJWMTWGQ0XAUGG55B">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEUF0EQXOXSVUIBUFGVVT15RRMMLAQB5YJYHZIUCMK1NPQRGVYW0P">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEKSSVECX5VZEIK2EQ2EYXPDXVJ2TJKC5JX2DPVJSLJIROP2GL3ZH">Width Constraint (Min=0.254mm) (Max=1mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPSDQGBS3THC3JS0UYPJWTAD4SLTFF13PRO4EMYNWHT4RCYPUGSZD">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUHVXBIKYCGOVCGSMHSW4CJA5SJY4YRPTSRULMZIM3B4NFBKXEK1L">Hole Size Constraint (Min=0.3mm) (Max=5.08mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOHIFRDNRY1WDITBVTDQ32S04AIAMJIPBWYRBP4LNTHFXU4S4USJO">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM1S151YI2Z2PICSJJACHGEOUSO40AD2A3U1STXCOJDIY45TXAJYL">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUNQYXK4EHVGKDM5COEV0VVXHACNTHTFWIIFNZDOKAURCFP24GTUE">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">57</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCC3XKGBK05MNJVIEVP4LATYSCCVVCRWTOVIMJKLJS1IONCARJJIB">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTJVZKN13TODIF00Z3NXBXIDDALCRPHBZSSJ4WQFRWPHO2CFJOJMD">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDG4QMC0PFMEZOJ1AB0J0IUFTLFFXFT1NUSOZEOFCXSGAJYSXNTCK">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">81</td>
+</tr>
+</table><br><a name="IDM1S151YI2Z2PICSJJACHGEOUSO40AD2A3U1STXCOJDIY45TXAJYL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.099mil|Location2.X=2232.349mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2221.099mil|Location2.X=2232.349mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.057mm &lt; 0.254mm) Between Pad P2-1(56.229mm,5.542mm) on Top Layer And Pad P2-2(56.889mm,5.542mm) on Top Layer [Top Solder] Mask Sliver [0.057mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.599mil|Location2.X=2257.849mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2246.599mil|Location2.X=2257.849mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.254mm) Between Pad P2-2(56.889mm,5.542mm) on Top Layer And Pad P2-3(57.524mm,5.542mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.099mil|Location2.X=2283.349mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2272.099mil|Location2.X=2283.349mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.057mm &lt; 0.254mm) Between Pad P2-3(57.524mm,5.542mm) on Top Layer And Pad P2-4(58.184mm,5.542mm) on Top Layer [Top Solder] Mask Sliver [0.057mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2297.599mil|Location2.X=2308.849mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2297.599mil|Location2.X=2308.849mil|Location1.Y=181.973mil|Location2.Y=193.223mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.032mm &lt; 0.254mm) Between Pad P2-4(58.184mm,5.542mm) on Top Layer And Pad P2-5(58.819mm,5.542mm) on Top Layer [Top Solder] Mask Sliver [0.032mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2170.517mil|Location2.X=2181.767mil|Location1.Y=72.974mil|Location2.Y=84.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2170.517mil|Location2.X=2181.767mil|Location1.Y=72.974mil|Location2.Y=84.224mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.197mm &lt; 0.254mm) Between Pad P2-6(53.924mm,3.048mm) on Top Layer And Pad P2-6(56.374mm,3.048mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.682mil|Location2.X=2358.932mil|Location1.Y=72.974mil|Location2.Y=84.224mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2347.682mil|Location2.X=2358.932mil|Location1.Y=72.974mil|Location2.Y=84.224mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.197mm &lt; 0.254mm) Between Pad P2-6(58.674mm,3.048mm) on Top Layer And Pad P2-6(61.124mm,3.048mm) on Top Layer [Top Solder] Mask Sliver [0.197mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUNQYXK4EHVGKDM5COEV0VVXHACNTHTFWIIFNZDOKAURCFP24GTUE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.167mil|Location2.X=1458.833mil|Location1.Y=415.732mil|Location2.Y=423.399mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.167mil|Location2.X=1458.833mil|Location1.Y=415.732mil|Location2.Y=423.399mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C1-1(37.465mm,10.414mm) on Top Layer And Track (36.957mm,8.255mm)(36.957mm,12.573mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1661.167mil|Location2.X=1668.833mil|Location1.Y=396.601mil|Location2.Y=404.268mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1661.167mil|Location2.X=1668.833mil|Location1.Y=396.601mil|Location2.Y=404.268mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C1-2(41.783mm,10.414mm) on Top Layer And Track (42.291mm,7.747mm)(42.291mm,13.081mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=953.154mil|Location2.Y=964.404mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=953.154mil|Location2.Y=964.404mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C2-1(38.862mm,24.003mm) on Top Layer And Track (38.354mm,23.622mm)(38.354mm,25.654mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.03mil|Location2.X=1541.961mil|Location1.Y=929.116mil|Location2.Y=940.366mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.03mil|Location2.X=1541.961mil|Location1.Y=929.116mil|Location2.Y=940.366mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.249mm &lt; 0.254mm) Between Pad C2-1(38.862mm,24.003mm) on Top Layer And Track (38.354mm,23.622mm)(38.917mm,23.622mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.249mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=925.477mil|Location2.Y=936.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=925.477mil|Location2.Y=936.727mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C2-1(38.862mm,24.003mm) on Top Layer And Track (38.917mm,23.622mm)(39.37mm,23.622mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=925.596mil|Location2.Y=936.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=925.596mil|Location2.Y=936.846mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C2-1(38.862mm,24.003mm) on Top Layer And Track (39.37mm,23.622mm)(39.37mm,25.654mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1003.154mil|Location2.Y=1014.404mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1003.154mil|Location2.Y=1014.404mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C2-2(38.862mm,25.273mm) on Top Layer And Track (38.354mm,23.622mm)(38.354mm,25.654mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.674mil|Location2.X=1516.924mil|Location1.Y=1003.273mil|Location2.Y=1014.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.674mil|Location2.X=1516.924mil|Location1.Y=1003.273mil|Location2.Y=1014.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C2-2(38.862mm,25.273mm) on Top Layer And Track (38.354mm,25.654mm)(39.37mm,25.654mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=975.596mil|Location2.Y=986.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=975.596mil|Location2.Y=986.846mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C2-2(38.862mm,25.273mm) on Top Layer And Track (39.37mm,23.622mm)(39.37mm,25.654mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2085.732mil|Location2.X=2093.398mil|Location1.Y=1231.167mil|Location2.Y=1238.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2085.732mil|Location2.X=2093.398mil|Location1.Y=1231.167mil|Location2.Y=1238.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C3-1(52.832mm,31.877mm) on Top Layer And Track (50.673mm,31.369mm)(54.991mm,31.369mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2066.602mil|Location2.X=2074.268mil|Location1.Y=1441.167mil|Location2.Y=1448.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2066.602mil|Location2.X=2074.268mil|Location1.Y=1441.167mil|Location2.Y=1448.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C3-2(52.832mm,36.195mm) on Top Layer And Track (50.165mm,36.703mm)(55.499mm,36.703mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.517mil|Location2.X=2136.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.517mil|Location2.X=2136.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C4-1(54.61mm,28.067mm) on Top Layer And Track (54.102mm,26.416mm)(54.102mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.674mil|Location2.X=2136.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.674mil|Location2.X=2136.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C4-1(54.61mm,28.067mm) on Top Layer And Track (54.102mm,28.448mm)(54.555mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.076mil|Location2.X=2174.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.076mil|Location2.X=2174.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C4-1(54.61mm,28.067mm) on Top Layer And Track (54.555mm,28.448mm)(55.118mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.233mil|Location2.X=2174.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.233mil|Location2.X=2174.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C4-1(54.61mm,28.067mm) on Top Layer And Track (55.118mm,26.416mm)(55.118mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.517mil|Location2.X=2136.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2125.517mil|Location2.X=2136.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C4-2(54.61mm,26.797mm) on Top Layer And Track (54.102mm,26.416mm)(54.102mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.076mil|Location2.X=2174.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.076mil|Location2.X=2174.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C4-2(54.61mm,26.797mm) on Top Layer And Track (54.102mm,26.416mm)(55.118mm,26.416mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.233mil|Location2.X=2174.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2163.233mil|Location2.X=2174.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C4-2(54.61mm,26.797mm) on Top Layer And Track (55.118mm,26.416mm)(55.118mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.157mil|Location2.X=1550.824mil|Location1.Y=1099.147mil|Location2.Y=1106.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.157mil|Location2.X=1550.824mil|Location1.Y=1099.147mil|Location2.Y=1106.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Text "C2" (38.532mm,26.492mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1539.138mil|Location2.X=1546.804mil|Location1.Y=1101.15mil|Location2.Y=1108.817mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1539.138mil|Location2.X=1546.804mil|Location1.Y=1101.15mil|Location2.Y=1108.817mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Text "IC1" (36.906mm,26.797mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Track (38.354mm,26.416mm)(38.354mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.674mil|Location2.X=1516.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.674mil|Location2.X=1516.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Track (38.354mm,28.448mm)(38.807mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Track (38.807mm,28.448mm)(39.37mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C5-1(38.862mm,28.067mm) on Top Layer And Track (39.37mm,26.416mm)(39.37mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1513.167mil|Location2.X=1520.833mil|Location1.Y=1060.746mil|Location2.Y=1068.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1513.167mil|Location2.X=1520.833mil|Location1.Y=1060.746mil|Location2.Y=1068.412mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-2(38.862mm,26.797mm) on Top Layer And Text "C2" (38.532mm,26.492mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1529.141mil|Location2.X=1536.807mil|Location1.Y=1051.167mil|Location2.Y=1058.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1529.141mil|Location2.X=1536.807mil|Location1.Y=1051.167mil|Location2.Y=1058.833mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C5-2(38.862mm,26.797mm) on Top Layer And Text "IC1" (36.906mm,26.797mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.517mil|Location2.X=1516.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C5-2(38.862mm,26.797mm) on Top Layer And Track (38.354mm,26.416mm)(38.354mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.076mil|Location2.X=1554.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C5-2(38.862mm,26.797mm) on Top Layer And Track (38.354mm,26.416mm)(39.37mm,26.416mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.233mil|Location2.X=1554.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C5-2(38.862mm,26.797mm) on Top Layer And Track (39.37mm,26.416mm)(39.37mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.517mil|Location2.X=1716.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.517mil|Location2.X=1716.767mil|Location1.Y=1113.155mil|Location2.Y=1124.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C6-1(43.942mm,28.067mm) on Top Layer And Track (43.434mm,26.416mm)(43.434mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.674mil|Location2.X=1716.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.674mil|Location2.X=1716.924mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C6-1(43.942mm,28.067mm) on Top Layer And Track (43.434mm,28.448mm)(43.887mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.076mil|Location2.X=1754.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.076mil|Location2.X=1754.326mil|Location1.Y=1113.273mil|Location2.Y=1124.523mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C6-1(43.942mm,28.067mm) on Top Layer And Track (43.887mm,28.448mm)(44.45mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.233mil|Location2.X=1754.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.233mil|Location2.X=1754.483mil|Location1.Y=1085.595mil|Location2.Y=1096.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C6-1(43.942mm,28.067mm) on Top Layer And Track (44.45mm,26.416mm)(44.45mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.517mil|Location2.X=1716.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1705.517mil|Location2.X=1716.767mil|Location1.Y=1063.155mil|Location2.Y=1074.405mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C6-2(43.942mm,26.797mm) on Top Layer And Track (43.434mm,26.416mm)(43.434mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.076mil|Location2.X=1754.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.076mil|Location2.X=1754.326mil|Location1.Y=1035.477mil|Location2.Y=1046.727mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.006mm &lt; 0.254mm) Between Pad C6-2(43.942mm,26.797mm) on Top Layer And Track (43.434mm,26.416mm)(44.45mm,26.416mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.006mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.233mil|Location2.X=1754.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.233mil|Location2.X=1754.483mil|Location1.Y=1035.595mil|Location2.Y=1046.845mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.008mm &lt; 0.254mm) Between Pad C6-2(43.942mm,26.797mm) on Top Layer And Track (44.45mm,26.416mm)(44.45mm,28.448mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.008mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1267.033mil|Location2.Y=1274.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1267.033mil|Location2.Y=1274.699mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC2-1(57.273mm,32.78mm) on Top Layer And Track (58.42mm,27.13mm)(58.42mm,33.83mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2223.137mil|Location2.X=2230.804mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2223.137mil|Location2.X=2230.804mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC2-2(57.273mm,30.48mm) on Top Layer And Text "C4" (54.28mm,29.286mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1176.482mil|Location2.Y=1184.148mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1176.482mil|Location2.Y=1184.148mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC2-2(57.273mm,30.48mm) on Top Layer And Track (58.42mm,27.13mm)(58.42mm,33.83mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1085.93mil|Location2.Y=1093.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2293.332mil|Location2.X=2300.999mil|Location1.Y=1085.93mil|Location2.Y=1093.597mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC2-3(57.273mm,28.18mm) on Top Layer And Track (58.42mm,27.13mm)(58.42mm,33.83mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2440.104mil|Location2.X=2447.77mil|Location1.Y=1260.143mil|Location2.Y=1267.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2440.104mil|Location2.X=2447.77mil|Location1.Y=1260.143mil|Location2.Y=1267.81mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC2-4(63.123mm,30.48mm) on Top Layer And Track (61.976mm,27.13mm)(61.976mm,33.83mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.157mil|Location2.X=1550.824mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.157mil|Location2.X=1550.824mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC3-1(38.608mm,30.734mm) on Top Layer And Text "C5" (38.532mm,29.286mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.157mil|Location2.X=1750.824mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1743.157mil|Location2.X=1750.824mil|Location1.Y=1209.147mil|Location2.Y=1216.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad IC3-3(43.688mm,30.734mm) on Top Layer And Text "C6" (43.612mm,29.286mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2519.167mil|Location2.X=2526.833mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2519.167mil|Location2.X=2526.833mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R1-1(64.262mm,4.191mm) on Top Layer And Text "D1" (64.084mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2519.167mil|Location2.X=2526.833mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2519.167mil|Location2.X=2526.833mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R1-2(64.262mm,5.461mm) on Top Layer And Text "D1" (64.084mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2595.188mil|Location2.X=2606.438mil|Location1.Y=175.123mil|Location2.Y=186.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2595.188mil|Location2.X=2606.438mil|Location1.Y=175.123mil|Location2.Y=186.373mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.144mm &lt; 0.254mm) Between Pad R2-1(66.633mm,4.191mm) on Top Layer And Text "D1" (64.084mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.144mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2612.5mil|Location2.X=2620.167mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2612.5mil|Location2.X=2620.167mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R2-1(66.633mm,4.191mm) on Top Layer And Text "D2" (66.455mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2594.709mil|Location2.X=2605.959mil|Location1.Y=222.047mil|Location2.Y=233.96mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2594.709mil|Location2.X=2605.959mil|Location1.Y=222.047mil|Location2.Y=233.96mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.208mm &lt; 0.254mm) Between Pad R2-2(66.633mm,5.461mm) on Top Layer And Text "D1" (64.084mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.208mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2612.5mil|Location2.X=2620.167mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2612.5mil|Location2.X=2620.167mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R2-2(66.633mm,5.461mm) on Top Layer And Text "D2" (66.455mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.591mil|Location2.X=2723.258mil|Location1.Y=163.071mil|Location2.Y=170.738mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.591mil|Location2.X=2723.258mil|Location1.Y=163.071mil|Location2.Y=170.738mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R3-1(69.003mm,4.191mm) on Top Layer And Text "D2" (66.455mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R3-1(69.003mm,4.191mm) on Top Layer And Text "D3" (68.826mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.591mil|Location2.X=2723.258mil|Location1.Y=213.055mil|Location2.Y=220.721mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.591mil|Location2.X=2723.258mil|Location1.Y=213.055mil|Location2.Y=220.721mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R3-2(69.003mm,5.461mm) on Top Layer And Text "D2" (66.455mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R3-2(69.003mm,5.461mm) on Top Layer And Text "D3" (68.826mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2805.801mil|Location2.X=2813.468mil|Location1.Y=176.915mil|Location2.Y=184.581mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2805.801mil|Location2.X=2813.468mil|Location1.Y=176.915mil|Location2.Y=184.581mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R4-1(71.374mm,4.191mm) on Top Layer And Text "D3" (68.826mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.167mil|Location2.X=2806.833mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.167mil|Location2.X=2806.833mil|Location1.Y=166.767mil|Location2.Y=174.433mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R4-1(71.374mm,4.191mm) on Top Layer And Text "D4" (71.196mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2798.928mil|Location2.X=2806.595mil|Location1.Y=223.051mil|Location2.Y=230.718mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2798.928mil|Location2.X=2806.595mil|Location1.Y=223.051mil|Location2.Y=230.718mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R4-2(71.374mm,5.461mm) on Top Layer And Text "D3" (68.826mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.167mil|Location2.X=2806.833mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2799.167mil|Location2.X=2806.833mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad R4-2(71.374mm,5.461mm) on Top Layer And Text "D4" (71.196mm,4.14mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDCC3XKGBK05MNJVIEVP4LATYSCCVVCRWTOVIMJKLJS1IONCARJJIB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1541.147mil|Location2.X=1548.814mil|Location1.Y=1100.149mil|Location2.Y=1107.815mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1541.147mil|Location2.X=1548.814mil|Location1.Y=1100.149mil|Location2.Y=1107.815mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C2" (38.532mm,26.492mm) on Top Overlay And Text "IC1" (36.906mm,26.797mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.867mil|Location2.X=1517.117mil|Location1.Y=1087.359mil|Location2.Y=1098.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.867mil|Location2.X=1517.117mil|Location1.Y=1087.359mil|Location2.Y=1098.609mil|Absolute=True">Silk To Silk Clearance Constraint: (0.026mm &lt; 0.254mm) Between Text "C2" (38.532mm,26.492mm) on Top Overlay And Track (38.354mm,26.416mm)(38.354mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0.026mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1523.164mil|Location2.X=1530.83mil|Location1.Y=1035.659mil|Location2.Y=1043.325mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1523.164mil|Location2.X=1530.83mil|Location1.Y=1035.659mil|Location2.Y=1043.325mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C2" (38.532mm,26.492mm) on Top Overlay And Track (38.354mm,26.416mm)(39.37mm,26.416mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1546.167mil|Location2.X=1553.833mil|Location1.Y=1096.138mil|Location2.Y=1103.804mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1546.167mil|Location2.X=1553.833mil|Location1.Y=1096.138mil|Location2.Y=1103.804mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C2" (38.532mm,26.492mm) on Top Overlay And Track (39.37mm,26.416mm)(39.37mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2604.029mil|Location2.X=2615.279mil|Location1.Y=157.375mil|Location2.Y=168.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2604.029mil|Location2.X=2615.279mil|Location1.Y=157.375mil|Location2.Y=168.625mil|Absolute=True">Silk To Silk Clearance Constraint: (0.085mm &lt; 0.254mm) Between Text "D1" (64.084mm,4.14mm) on Top Overlay And Text "D2" (66.455mm,4.14mm) on Top Overlay Silk Text to Silk Clearance [0.085mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=159.167mil|Location2.Y=166.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2705.833mil|Location2.X=2713.5mil|Location1.Y=159.167mil|Location2.Y=166.833mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "D2" (66.455mm,4.14mm) on Top Overlay And Text "D3" (68.826mm,4.14mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2797.485mil|Location2.X=2805.152mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2797.485mil|Location2.X=2805.152mil|Location1.Y=219.147mil|Location2.Y=226.814mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "D3" (68.826mm,4.14mm) on Top Overlay And Text "D4" (71.196mm,4.14mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.649mil|Location2.X=1513.316mil|Location1.Y=1111.147mil|Location2.Y=1118.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.649mil|Location2.X=1513.316mil|Location1.Y=1111.147mil|Location2.Y=1118.814mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "IC1" (36.906mm,26.797mm) on Top Overlay And Track (38.354mm,26.416mm)(38.354mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1507.356mil|Location2.X=1518.606mil|Location1.Y=1039.867mil|Location2.Y=1051.117mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1507.356mil|Location2.X=1518.606mil|Location1.Y=1039.867mil|Location2.Y=1051.117mil|Absolute=True">Silk To Silk Clearance Constraint: (0.229mm &lt; 0.254mm) Between Text "IC1" (36.906mm,26.797mm) on Top Overlay And Track (38.354mm,26.416mm)(39.37mm,26.416mm) on Top Overlay Silk Text to Silk Clearance [0.229mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1509.147mil|Location2.X=1516.814mil|Location1.Y=1115.665mil|Location2.Y=1123.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1509.147mil|Location2.X=1516.814mil|Location1.Y=1115.665mil|Location2.Y=1123.332mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "IC1" (36.906mm,26.797mm) on Top Overlay And Track (38.354mm,28.448mm)(38.807mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1529.141mil|Location2.X=1536.807mil|Location1.Y=1115.665mil|Location2.Y=1123.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1529.141mil|Location2.X=1536.807mil|Location1.Y=1115.665mil|Location2.Y=1123.332mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "IC1" (36.906mm,26.797mm) on Top Overlay And Track (38.807mm,28.448mm)(39.37mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.868mil|Location2.X=1554.118mil|Location1.Y=1099.359mil|Location2.Y=1110.609mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.868mil|Location2.X=1554.118mil|Location1.Y=1099.359mil|Location2.Y=1110.609mil|Absolute=True">Silk To Silk Clearance Constraint: (0.027mm &lt; 0.254mm) Between Text "IC1" (36.906mm,26.797mm) on Top Overlay And Track (39.37mm,26.416mm)(39.37mm,28.448mm) on Top Overlay Silk Text to Silk Clearance [0.027mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2599.029mil|Location2.X=2610.279mil|Location1.Y=257.375mil|Location2.Y=268.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2599.029mil|Location2.X=2610.279mil|Location1.Y=257.375mil|Location2.Y=268.625mil|Absolute=True">Silk To Silk Clearance Constraint: (0.085mm &lt; 0.254mm) Between Text "R1" (63.957mm,6.68mm) on Top Overlay And Text "R2" (66.328mm,6.68mm) on Top Overlay Silk Text to Silk Clearance [0.085mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2700.833mil|Location2.X=2708.5mil|Location1.Y=259.167mil|Location2.Y=266.833mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2700.833mil|Location2.X=2708.5mil|Location1.Y=259.167mil|Location2.Y=266.833mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "R2" (66.328mm,6.68mm) on Top Overlay And Text "R3" (68.699mm,6.68mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2792.485mil|Location2.X=2800.152mil|Location1.Y=319.147mil|Location2.Y=326.814mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2792.485mil|Location2.X=2800.152mil|Location1.Y=319.147mil|Location2.Y=326.814mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "R3" (68.699mm,6.68mm) on Top Overlay And Text "R4" (71.069mm,6.68mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.167mil|Location2.X=1458.833mil|Location1.Y=367.738mil|Location2.Y=375.404mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1451.167mil|Location2.X=1458.833mil|Location1.Y=367.738mil|Location2.Y=375.404mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "S1" (36.551mm,7.914mm) on Top Overlay And Track (36.957mm,8.255mm)(36.957mm,12.573mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1463.94mil|Location2.X=1471.607mil|Location1.Y=306.54mil|Location2.Y=314.207mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1463.94mil|Location2.X=1471.607mil|Location1.Y=306.54mil|Location2.Y=314.207mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "S1" (36.551mm,7.914mm) on Top Overlay And Track (36.957mm,8.255mm)(37.465mm,7.747mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1495.147mil|Location2.X=1502.814mil|Location1.Y=302.946mil|Location2.Y=310.613mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\Documents\2020\RoboIME\SSL-Prototype\SSL-Prototype-2020\SSL-2020-PowerBoard1.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1495.147mil|Location2.X=1502.814mil|Location1.Y=302.946mil|Location2.Y=310.613mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "S1" (36.551mm,7.914mm) on Top Overlay And Track (37.465mm,7.747mm)(42.291mm,7.747mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

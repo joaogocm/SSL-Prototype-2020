@@ -1,0 +1,388 @@
+Added Component: Designator=C1(CAP ALUM 5X5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "5x5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "EDH226M025S9DAA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "EDH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Surface Mount Aluminum Electrolytic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "22uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP ALUM 5X5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "5x5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Nichion"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "UWX1E100MCL1GB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "UWX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Surface Mount Aluminum Electrolytic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP CER 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "C0603C104Z3VACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SMD Comm Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP CER 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "C1608X5R1E334K080AC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "330nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=D1(LED 0603 GREEN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "WL-SMCD"; VariantName = "[No Variations]"
+Added Component: Designator=D2(LED 0603 GREEN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "WL-SMCD"; VariantName = "[No Variations]"
+Added Component: Designator=D3(LED 0603 GREEN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "WL-SMCD"; VariantName = "[No Variations]"
+Added Component: Designator=D4(LED 0603 GREEN)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Green"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Current"; Value = "20mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Forward Voltage"; Value = "2V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "WL-SMCD"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(D2PAK)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "D2PAK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "L4940"; VariantName = "[No Variations]"
+Added Component: Designator=IC2(SOT-223)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-223-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "LD1117"; VariantName = "[No Variations]"
+Added Component: Designator=IC3(D2PAK)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "D2PAK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "L78"; VariantName = "[No Variations]"
+Added Component: Designator=P1(XT60-Male)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "DFRobot"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "FIT0587"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "XT60 Male Connector"; VariantName = "[No Variations]"
+Added Component: Designator=P2(USB-MICRO-AB)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Current Rating"; Value = "1.8 A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Jack (Female)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Wurth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "629105150921"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "WR-COM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Micro USB AB"; VariantName = "[No Variations]"
+Added Component: Designator=P3(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=P4(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=P5(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=P6(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=P7(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=P8(HEADER 12X2 FEM)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Harwin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "M20-7831242"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.54mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "M20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Socket Assembly"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(DPAK/TO-252-3)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "Infineon / IR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO-252-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "N-Channel MOSFET"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RES SMD 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Vishay / Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "CRCW0603560RJNEA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "1/10 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "560R"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RES SMD 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Vishay / Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "CRCW0603680RJNEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "1/10 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "680R"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RES SMD 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Vishay / Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "CRCW0603220RJNEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "1/10 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "220R"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RES SMD 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "Vishay / Dale"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "CRCW0603100RFKEAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "1/10 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100R"; VariantName = "[No Variations]"
+Added Component: Designator=S1(SPDT-SWITCH)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Contact Form"; Value = "SPDT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "300 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "C&K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Slide Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "30 VDC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=VDD Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=+5 Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=GND Pin=D3-2
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=GND Pin=D4-2
+Added Pin To Net: NetName=NetC2_1 Pin=IC1-1
+Added Pin To Net: NetName=GND Pin=IC1-2
+Added Pin To Net: NetName=NetC1_1 Pin=IC1-3
+Added Pin To Net: NetName=GND Pin=IC2-1
+Added Pin To Net: NetName=VDD Pin=IC2-2
+Added Pin To Net: NetName=+5 Pin=IC2-3
+Added Pin To Net: NetName=GND Pin=IC2-4
+Added Pin To Net: NetName=NetC5_1 Pin=IC3-1
+Added Pin To Net: NetName=GND Pin=IC3-2
+Added Pin To Net: NetName=+5 Pin=IC3-3
+Added Pin To Net: NetName=VBAT Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=+5 Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=GND Pin=P2-6
+Added Pin To Net: NetName=VBAT Pin=P3-1
+Added Pin To Net: NetName=VBAT Pin=P3-2
+Added Pin To Net: NetName=VBAT Pin=P3-3
+Added Pin To Net: NetName=VBAT Pin=P3-4
+Added Pin To Net: NetName=VBAT Pin=P3-5
+Added Pin To Net: NetName=VBAT Pin=P3-6
+Added Pin To Net: NetName=VBAT Pin=P3-7
+Added Pin To Net: NetName=VBAT Pin=P3-8
+Added Pin To Net: NetName=DIR_OUT Pin=P3-9
+Added Pin To Net: NetName=DIR_OUT Pin=P3-10
+Added Pin To Net: NetName=FAULT2 Pin=P3-11
+Added Pin To Net: NetName=FAULT2 Pin=P3-12
+Added Pin To Net: NetName=FAULT1 Pin=P3-13
+Added Pin To Net: NetName=FAULT1 Pin=P3-14
+Added Pin To Net: NetName=SPD_OUT Pin=P3-15
+Added Pin To Net: NetName=SPD_OUT Pin=P3-16
+Added Pin To Net: NetName=GND Pin=P3-19
+Added Pin To Net: NetName=GND Pin=P3-20
+Added Pin To Net: NetName=GND Pin=P3-21
+Added Pin To Net: NetName=GND Pin=P3-22
+Added Pin To Net: NetName=GND Pin=P3-23
+Added Pin To Net: NetName=GND Pin=P3-24
+Added Pin To Net: NetName=+5 Pin=P4-1
+Added Pin To Net: NetName=+5 Pin=P4-2
+Added Pin To Net: NetName=+5 Pin=P4-3
+Added Pin To Net: NetName=+5 Pin=P4-4
+Added Pin To Net: NetName=+5 Pin=P4-5
+Added Pin To Net: NetName=+5 Pin=P4-6
+Added Pin To Net: NetName=CSOUT Pin=P4-7
+Added Pin To Net: NetName=CSOUT Pin=P4-8
+Added Pin To Net: NetName=MODE_IN Pin=P4-9
+Added Pin To Net: NetName=MODE_IN Pin=P4-10
+Added Pin To Net: NetName=PWM_IN Pin=P4-11
+Added Pin To Net: NetName=PWM_IN Pin=P4-12
+Added Pin To Net: NetName=DIR_IN Pin=P4-13
+Added Pin To Net: NetName=DIR_IN Pin=P4-14
+Added Pin To Net: NetName=GND Pin=P4-17
+Added Pin To Net: NetName=GND Pin=P4-18
+Added Pin To Net: NetName=GND Pin=P4-19
+Added Pin To Net: NetName=GND Pin=P4-20
+Added Pin To Net: NetName=GND Pin=P4-21
+Added Pin To Net: NetName=GND Pin=P4-22
+Added Pin To Net: NetName=GND Pin=P4-23
+Added Pin To Net: NetName=GND Pin=P4-24
+Added Pin To Net: NetName=GND Pin=P5-1
+Added Pin To Net: NetName=GND Pin=P5-2
+Added Pin To Net: NetName=VDD Pin=P5-3
+Added Pin To Net: NetName=VDD Pin=P5-4
+Added Pin To Net: NetName=VDD Pin=P5-5
+Added Pin To Net: NetName=VDD Pin=P5-6
+Added Pin To Net: NetName=CSOUT Pin=P5-7
+Added Pin To Net: NetName=CSOUT Pin=P5-8
+Added Pin To Net: NetName=MODE_IN Pin=P5-9
+Added Pin To Net: NetName=MODE_IN Pin=P5-10
+Added Pin To Net: NetName=PWM_IN Pin=P5-11
+Added Pin To Net: NetName=PWM_IN Pin=P5-12
+Added Pin To Net: NetName=DIR_IN Pin=P5-13
+Added Pin To Net: NetName=DIR_IN Pin=P5-14
+Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P5-15
+Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P5-16
+Added Pin To Net: NetName=KICK_SIGNAL Pin=P5-17
+Added Pin To Net: NetName=KICK_SIGNAL Pin=P5-18
+Added Pin To Net: NetName=VDD Pin=P5-19
+Added Pin To Net: NetName=VDD Pin=P5-20
+Added Pin To Net: NetName=VDD Pin=P5-21
+Added Pin To Net: NetName=VDD Pin=P5-22
+Added Pin To Net: NetName=GND Pin=P5-23
+Added Pin To Net: NetName=GND Pin=P5-24
+Added Pin To Net: NetName=GND Pin=P6-1
+Added Pin To Net: NetName=GND Pin=P6-2
+Added Pin To Net: NetName=GND Pin=P6-3
+Added Pin To Net: NetName=GND Pin=P6-4
+Added Pin To Net: NetName=GND Pin=P6-5
+Added Pin To Net: NetName=GND Pin=P6-6
+Added Pin To Net: NetName=GND Pin=P6-7
+Added Pin To Net: NetName=GND Pin=P6-8
+Added Pin To Net: NetName=GND Pin=P6-9
+Added Pin To Net: NetName=GND Pin=P6-10
+Added Pin To Net: NetName=GND Pin=P6-11
+Added Pin To Net: NetName=GND Pin=P6-12
+Added Pin To Net: NetName=GND Pin=P6-13
+Added Pin To Net: NetName=GND Pin=P6-14
+Added Pin To Net: NetName=GND Pin=P6-15
+Added Pin To Net: NetName=GND Pin=P6-16
+Added Pin To Net: NetName=GND Pin=P6-17
+Added Pin To Net: NetName=GND Pin=P6-18
+Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P6-19
+Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P6-20
+Added Pin To Net: NetName=KICK_SIGNAL Pin=P6-21
+Added Pin To Net: NetName=KICK_SIGNAL Pin=P6-22
+Added Pin To Net: NetName=CHARGE_ENABLE Pin=P6-23
+Added Pin To Net: NetName=CHARGE_ENABLE Pin=P6-24
+Added Pin To Net: NetName=VBAT Pin=P7-1
+Added Pin To Net: NetName=VBAT Pin=P7-2
+Added Pin To Net: NetName=VBAT Pin=P7-3
+Added Pin To Net: NetName=VBAT Pin=P7-4
+Added Pin To Net: NetName=VBAT Pin=P7-5
+Added Pin To Net: NetName=VBAT Pin=P7-6
+Added Pin To Net: NetName=VBAT Pin=P7-7
+Added Pin To Net: NetName=VBAT Pin=P7-8
+Added Pin To Net: NetName=VBAT Pin=P7-9
+Added Pin To Net: NetName=VBAT Pin=P7-10
+Added Pin To Net: NetName=VBAT Pin=P7-11
+Added Pin To Net: NetName=VBAT Pin=P7-12
+Added Pin To Net: NetName=GND Pin=P7-17
+Added Pin To Net: NetName=GND Pin=P7-18
+Added Pin To Net: NetName=GND Pin=P7-19
+Added Pin To Net: NetName=GND Pin=P7-20
+Added Pin To Net: NetName=GND Pin=P7-21
+Added Pin To Net: NetName=GND Pin=P7-22
+Added Pin To Net: NetName=GND Pin=P7-23
+Added Pin To Net: NetName=GND Pin=P7-24
+Added Pin To Net: NetName=GND Pin=P8-1
+Added Pin To Net: NetName=GND Pin=P8-2
+Added Pin To Net: NetName=VDD Pin=P8-3
+Added Pin To Net: NetName=VDD Pin=P8-4
+Added Pin To Net: NetName=VDD Pin=P8-5
+Added Pin To Net: NetName=VDD Pin=P8-6
+Added Pin To Net: NetName=CHARGE_ENABLE Pin=P8-7
+Added Pin To Net: NetName=CHARGE_ENABLE Pin=P8-8
+Added Pin To Net: NetName=DIR_OUT Pin=P8-9
+Added Pin To Net: NetName=DIR_OUT Pin=P8-10
+Added Pin To Net: NetName=FAULT2 Pin=P8-11
+Added Pin To Net: NetName=FAULT2 Pin=P8-12
+Added Pin To Net: NetName=FAULT1 Pin=P8-13
+Added Pin To Net: NetName=FAULT1 Pin=P8-14
+Added Pin To Net: NetName=SPD_OUT Pin=P8-15
+Added Pin To Net: NetName=SPD_OUT Pin=P8-16
+Added Pin To Net: NetName=+5 Pin=P8-17
+Added Pin To Net: NetName=+5 Pin=P8-18
+Added Pin To Net: NetName=VDD Pin=P8-19
+Added Pin To Net: NetName=VDD Pin=P8-20
+Added Pin To Net: NetName=VDD Pin=P8-21
+Added Pin To Net: NetName=VDD Pin=P8-22
+Added Pin To Net: NetName=GND Pin=P8-23
+Added Pin To Net: NetName=GND Pin=P8-24
+Added Pin To Net: NetName=NetC1_1 Pin=Q1-1
+Added Pin To Net: NetName=VBAT Pin=Q1-2
+Added Pin To Net: NetName=NetC5_1 Pin=Q1-3
+Added Pin To Net: NetName=NetD1_1 Pin=R1-1
+Added Pin To Net: NetName=NetC1_1 Pin=R1-2
+Added Pin To Net: NetName=NetD2_1 Pin=R2-1
+Added Pin To Net: NetName=NetC5_1 Pin=R2-2
+Added Pin To Net: NetName=NetD3_1 Pin=R3-1
+Added Pin To Net: NetName=+5 Pin=R3-2
+Added Pin To Net: NetName=NetD4_1 Pin=R4-1
+Added Pin To Net: NetName=VDD Pin=R4-2
+Added Pin To Net: NetName=GND Pin=S1-1
+Added Pin To Net: NetName=NetC2_1 Pin=S1-2
+Added Pin To Net: NetName=VBAT Pin=S1-3
+Added Member To Class: ClassName=12V-Supply Member=Component C1 22uF
+Added Member To Class: ClassName=3V3-Supply Member=Component C3 10uF
+Added Member To Class: ClassName=3V3-Supply Member=Component C4 100nF
+Added Member To Class: ClassName=5V-Supply Member=Component C5 330nF
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component D1 150060VS55040
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component D2 150060VS55040
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component D3 150060VS55040
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component D4 150060VS55040
+Added Member To Class: ClassName=12V-Supply Member=Component IC1 L4940D2T12-TR
+Added Member To Class: ClassName=3V3-Supply Member=Component IC2 LD1117S33CTR
+Added Member To Class: ClassName=5V-Supply Member=Component IC3 L7805ACD2T-TR
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P1 XT60
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P2 USB Micro AB
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P3 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P4 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P5 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P6 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P7 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P8 12X2
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component Q1 IRFR7440TRPBF
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component R1 560R
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component R2 680R
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component R3 220R
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component R4 100R
+Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component S1 SK12F17G7

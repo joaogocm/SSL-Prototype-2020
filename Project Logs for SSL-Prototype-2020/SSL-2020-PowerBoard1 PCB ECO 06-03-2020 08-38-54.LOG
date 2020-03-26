@@ -1,0 +1,24 @@
+Added Component: Designator=C2(CAP CER 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "C0603C104Z3VACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SMD Comm Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP CER 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "C0603C104Z3VACTU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SMD Comm Y5V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "25V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=+5 Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Member To Class: ClassName=12V-Supply Member=Component C2 100nF
+Added Member To Class: ClassName=5V-Supply Member=Component C6 100nF

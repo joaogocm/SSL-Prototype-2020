@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=SSL-2020-PowerBoard1.SchDoc
+Record=SheetSymbol|SourceDocument=SSL-2020-PowerBoard1.SchDoc|Designator=3V3-Supply|SchDesignator=3V3-Supply|FileName=VREG_3V3.SchDoc|SymbolType=Normal|RawFileName=VREG_3V3.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=SSL-2020-PowerBoard1.SchDoc|Designator=5V-Supply|SchDesignator=5V-Supply|FileName=VREG_5V.SchDoc|SymbolType=Normal|RawFileName=VREG_5V.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=SSL-2020-PowerBoard1.SchDoc|Designator=12V-Supply|SchDesignator=12V-Supply|FileName=VREG_12V.SchDoc|SymbolType=Normal|RawFileName=VREG_12V.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
