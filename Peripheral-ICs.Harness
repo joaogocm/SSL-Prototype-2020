@@ -1,0 +1,2 @@
+SPI_Harness_4pins=nCS,SDI,SCLK,SDO
+SPI_Harness_5pins=SDI,SDO,SCLK,nCS,INT
