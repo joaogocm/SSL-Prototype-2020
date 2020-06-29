@@ -1,4 +1,5 @@
 I2C_Harness_2pins=SDA,SCL
 I2C_Harness_3pins=SDA,SCL,INT
+LEDs=LED_R,LED_B,LED_G,LED_Y
 SPI_Harness_4pins=nCS,SDI,SCLK,SDO
 SPI_Harness_5pins=SDI,SDO,SCLK,nCS,INT
