@@ -1,0 +1,5 @@
+Removed Member From Class: ClassName=Designator Member=S1
+Added Member To Class: ClassName=Designator Member=Component C13 1uF
+Added Member To Class: ClassName=Logic ICs Member=Component D4 150060VS55040
+Added Member To Class: ClassName=Designator Member=Component R3 10K
+Added Member To Class: ClassName=Designator Member=Component S3 SK12F17G7
