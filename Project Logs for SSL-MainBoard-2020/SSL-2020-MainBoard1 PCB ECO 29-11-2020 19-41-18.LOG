@@ -1,0 +1,308 @@
+Removed Pin From Net: NetName=SPI4_SCK Pin=IC9-1
+Removed Pin From Net: NetName=TIM15_CH1 Pin=IC9-4
+Removed Pin From Net: NetName=TIM15_CH2 Pin=IC9-5
+Removed Pin From Net: NetName=VDD Pin=IC9-6
+Removed Pin From Net: NetName=OSC32_IN Pin=IC9-8
+Removed Pin From Net: NetName=OSC32_OUT Pin=IC9-9
+Removed Pin From Net: NetName=ADC3_INP9 Pin=IC9-14
+Removed Pin From Net: NetName=GND Pin=IC9-16
+Removed Pin From Net: NetName=VDD Pin=IC9-17
+Removed Pin From Net: NetName=ADC3_INP8 Pin=IC9-18
+Removed Pin From Net: NetName=ADC3_INP7 Pin=IC9-20
+Removed Pin From Net: NetName=ADC3_INP6 Pin=IC9-22
+Removed Pin From Net: NetName=OSC25M_IN Pin=IC9-23
+Removed Pin From Net: NetName=OSC25M_OUT Pin=IC9-24
+Removed Pin From Net: NetName=NRST Pin=IC9-25
+Removed Pin From Net: NetName=SPI2_MOSI Pin=IC9-27
+Removed Pin From Net: NetName=SDI2 Pin=IC9-28
+Removed Pin From Net: NetName=VDD Pin=IC9-30
+Removed Pin From Net: NetName=GND Pin=IC9-31
+Removed Pin From Net: NetName=VDDA Pin=IC9-32
+Removed Pin From Net: NetName=VDDA Pin=IC9-33
+Removed Pin From Net: NetName=ENCA_M2 Pin=IC9-34
+Removed Pin From Net: NetName=ENCB_M2 Pin=IC9-35
+Removed Pin From Net: NetName=PWM_M2 Pin=IC9-36
+Removed Pin From Net: NetName=PWM_M1 Pin=IC9-37
+Removed Pin From Net: NetName=GND Pin=IC9-38
+Removed Pin From Net: NetName=VDD Pin=IC9-39
+Removed Pin From Net: NetName=SCLK1 Pin=IC9-41
+Removed Pin From Net: NetName=ENCA_M3 Pin=IC9-42
+Removed Pin From Net: NetName=SDI1 Pin=IC9-43
+Removed Pin From Net: NetName=ADC2_INP8 Pin=IC9-45
+Removed Pin From Net: NetName=ADC2_INP9 Pin=IC9-46
+Removed Pin From Net: NetName=ADC1_INP5 Pin=IC9-47
+Removed Pin From Net: NetName=ADC1_INP6 Pin=IC9-50
+Removed Pin From Net: NetName=GND Pin=IC9-51
+Removed Pin From Net: NetName=VDD Pin=IC9-52
+Removed Pin From Net: NetName=ADC2_INP6 Pin=IC9-54
+Removed Pin From Net: NetName=ENCA_M1 Pin=IC9-60
+Removed Pin From Net: NetName=GND Pin=IC9-61
+Removed Pin From Net: NetName=VDD Pin=IC9-62
+Removed Pin From Net: NetName=ENCB_M1 Pin=IC9-64
+Removed Pin From Net: NetName=SPI4_MISO Pin=IC9-66
+Removed Pin From Net: NetName=SPI4_MOSI Pin=IC9-67
+Removed Pin From Net: NetName=SCLK2 Pin=IC9-69
+Removed Pin From Net: NetName=VDD Pin=IC9-71
+Removed Pin From Net: NetName=VDD Pin=IC9-72
+Removed Pin From Net: NetName=UART5_RX Pin=IC9-73
+Removed Pin From Net: NetName=UART5_TX Pin=IC9-74
+Removed Pin From Net: NetName=LED3_R Pin=IC9-75
+Removed Pin From Net: NetName=TIM12_CH2 Pin=IC9-76
+Removed Pin From Net: NetName=STLK_RX Pin=IC9-77
+Removed Pin From Net: NetName=STLK_TX Pin=IC9-78
+Removed Pin From Net: NetName=ENCA_M4 Pin=IC9-81
+Removed Pin From Net: NetName=ENCB_M4 Pin=IC9-82
+Removed Pin From Net: NetName=GND Pin=IC9-83
+Removed Pin From Net: NetName=VDD Pin=IC9-84
+Removed Pin From Net: NetName=USB_PowerSwitchOn Pin=IC9-91
+Removed Pin From Net: NetName=USB_OverCurrent Pin=IC9-92
+Removed Pin From Net: NetName=GND Pin=IC9-94
+Removed Pin From Net: NetName=VDD Pin=IC9-95
+Removed Pin From Net: NetName=ENCB_M3 Pin=IC9-97
+Removed Pin From Net: NetName=PWM_M3 Pin=IC9-98
+Removed Pin From Net: NetName=PWM_M4 Pin=IC9-99
+Removed Pin From Net: NetName=USB_SOF(TP1) Pin=IC9-100
+Removed Pin From Net: NetName=USB_VBUS Pin=IC9-101
+Removed Pin From Net: NetName=USB_ID Pin=IC9-102
+Removed Pin From Net: NetName=USB_DM Pin=IC9-103
+Removed Pin From Net: NetName=USB_DP Pin=IC9-104
+Removed Pin From Net: NetName=SWDIO Pin=IC9-105
+Removed Pin From Net: NetName=VDD Pin=IC9-106
+Removed Pin From Net: NetName=GND Pin=IC9-107
+Removed Pin From Net: NetName=VDD Pin=IC9-108
+Removed Pin From Net: NetName=USB_VBUS Pin=R22-2
+Removed Member From Class: ClassName=Logic ICs Member=C5
+Removed Member From Class: ClassName=Connectors Member=IC6
+Removed Member From Class: ClassName=Connectors Member=R4
+Change Component Designator: OldDesignator=C1 NewDesignator=C?
+Change Component Designator: OldDesignator=C2 NewDesignator=C?
+Change Component Designator: OldDesignator=C3 NewDesignator=C?
+Change Component Designator: OldDesignator=C4 NewDesignator=C?
+Change Component Designator: OldDesignator=C5 NewDesignator=C?
+Change Component Designator: OldDesignator=C6 NewDesignator=C?
+Change Component Designator: OldDesignator=C7 NewDesignator=C?
+Change Component Designator: OldDesignator=C8 NewDesignator=C?
+Change Component Designator: OldDesignator=C9 NewDesignator=C?
+Change Component Designator: OldDesignator=C10 NewDesignator=C?
+Change Component Designator: OldDesignator=C11 NewDesignator=C?
+Change Component Designator: OldDesignator=C12 NewDesignator=C?
+Change Component Designator: OldDesignator=C13 NewDesignator=C?
+Change Component Designator: OldDesignator=C14 NewDesignator=C?
+Change Component Designator: OldDesignator=C15 NewDesignator=C?
+Change Component Designator: OldDesignator=C16 NewDesignator=C?
+Change Component Designator: OldDesignator=C17 NewDesignator=C?
+Change Component Designator: OldDesignator=C18 NewDesignator=C?
+Change Component Designator: OldDesignator=C19 NewDesignator=C?
+Change Component Designator: OldDesignator=C20 NewDesignator=C?
+Change Component Designator: OldDesignator=C21 NewDesignator=C?
+Change Component Designator: OldDesignator=C22 NewDesignator=C?
+Change Component Designator: OldDesignator=C23 NewDesignator=C?
+Change Component Designator: OldDesignator=C24 NewDesignator=C?
+Change Component Designator: OldDesignator=C25 NewDesignator=C?
+Change Component Designator: OldDesignator=C26 NewDesignator=C?
+Change Component Designator: OldDesignator=C27 NewDesignator=C?
+Change Component Designator: OldDesignator=C28 NewDesignator=C?
+Change Component Designator: OldDesignator=C29 NewDesignator=C?
+Change Component Designator: OldDesignator=C30 NewDesignator=C?
+Change Component Designator: OldDesignator=C31 NewDesignator=C?
+Change Component Designator: OldDesignator=C32 NewDesignator=C?
+Change Component Designator: OldDesignator=C33 NewDesignator=C?
+Change Component Designator: OldDesignator=CONN1 NewDesignator=CONN?
+Change Component Designator: OldDesignator=D1 NewDesignator=D?
+Change Component Designator: OldDesignator=D2 NewDesignator=D?
+Change Component Designator: OldDesignator=D3 NewDesignator=D?
+Change Component Designator: OldDesignator=D4 NewDesignator=D?
+Change Component Designator: OldDesignator=D5 NewDesignator=D?
+Change Component Designator: OldDesignator=D6 NewDesignator=D?
+Change Component Designator: OldDesignator=D7 NewDesignator=D?
+Change Component Designator: OldDesignator=D8 NewDesignator=D?
+Change Component Designator: OldDesignator=D9 NewDesignator=D?
+Change Component Designator: OldDesignator=IC1 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC2 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC3 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC4 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC5 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC7 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC8 NewDesignator=IC?
+Change Component Designator: OldDesignator=IC9 NewDesignator=IC?
+Change Component Designator: OldDesignator=LS1 NewDesignator=LS?
+Change Component Designator: OldDesignator=P1 NewDesignator=P?
+Change Component Designator: OldDesignator=P2 NewDesignator=P?
+Change Component Designator: OldDesignator=P3 NewDesignator=P?
+Change Component Designator: OldDesignator=P4 NewDesignator=P?
+Change Component Designator: OldDesignator=P5 NewDesignator=P?
+Change Component Designator: OldDesignator=P6 NewDesignator=P?
+Change Component Designator: OldDesignator=P7 NewDesignator=P?
+Change Component Designator: OldDesignator=P8 NewDesignator=P?
+Change Component Designator: OldDesignator=P9 NewDesignator=P?
+Change Component Designator: OldDesignator=P10 NewDesignator=P?
+Change Component Designator: OldDesignator=P11 NewDesignator=P?
+Change Component Designator: OldDesignator=P12 NewDesignator=P?
+Change Component Designator: OldDesignator=P13 NewDesignator=P?
+Change Component Designator: OldDesignator=P14 NewDesignator=P?
+Change Component Designator: OldDesignator=P15 NewDesignator=P?
+Change Component Designator: OldDesignator=P16 NewDesignator=P?
+Change Component Designator: OldDesignator=P17 NewDesignator=P?
+Change Component Designator: OldDesignator=R1 NewDesignator=R?
+Change Component Designator: OldDesignator=R2 NewDesignator=R?
+Change Component Designator: OldDesignator=R3 NewDesignator=R?
+Change Component Designator: OldDesignator=R4 NewDesignator=R?
+Change Component Designator: OldDesignator=R5 NewDesignator=R?
+Change Component Designator: OldDesignator=R6 NewDesignator=R?
+Change Component Designator: OldDesignator=R7 NewDesignator=R?
+Change Component Designator: OldDesignator=R8 NewDesignator=R?
+Change Component Designator: OldDesignator=R9 NewDesignator=R?
+Change Component Designator: OldDesignator=R10 NewDesignator=R?
+Change Component Designator: OldDesignator=R11 NewDesignator=R?
+Change Component Designator: OldDesignator=R12 NewDesignator=R?
+Change Component Designator: OldDesignator=R13 NewDesignator=R?
+Change Component Designator: OldDesignator=R14 NewDesignator=R?
+Change Component Designator: OldDesignator=R15 NewDesignator=R?
+Change Component Designator: OldDesignator=R16 NewDesignator=R?
+Change Component Designator: OldDesignator=R17 NewDesignator=R?
+Change Component Designator: OldDesignator=R18 NewDesignator=R?
+Change Component Designator: OldDesignator=R19 NewDesignator=R?
+Change Component Designator: OldDesignator=R20 NewDesignator=R?
+Change Component Designator: OldDesignator=R21 NewDesignator=R?
+Change Component Designator: OldDesignator=R22 NewDesignator=R?
+Change Component Designator: OldDesignator=R23 NewDesignator=R?
+Change Component Designator: OldDesignator=R24 NewDesignator=R?
+Change Component Designator: OldDesignator=R25 NewDesignator=R?
+Change Component Designator: OldDesignator=R26 NewDesignator=R?
+Change Component Designator: OldDesignator=R27 NewDesignator=R?
+Change Component Designator: OldDesignator=R28 NewDesignator=R?
+Change Component Designator: OldDesignator=S1 NewDesignator=S?
+Change Component Designator: OldDesignator=S2 NewDesignator=S?
+Change Component Designator: OldDesignator=T1 NewDesignator=T?
+Change Component Designator: OldDesignator=Y1 NewDesignator=Y?
+Change Component Designator: OldDesignator=Y2 NewDesignator=Y?
+Added Component: Designator=IC?(LQFP-144)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex M7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "STM32H743ZIT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP-144"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "STM32H743ZI"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(LQFP-144)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex M7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "STM32H743ZIT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP-144"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "STM32H743ZI"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(LQFP-144)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex M7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "STM32H743ZIT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP-144"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "STM32H743ZI"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SPI4_SCK Pin=IC?-1
+Added Pin To Net: NetName=TIM15_CH1 Pin=IC?-4
+Added Pin To Net: NetName=TIM15_CH2 Pin=IC?-5
+Added Pin To Net: NetName=VDD Pin=IC?-6
+Added Pin To Net: NetName=OSC32_IN Pin=IC?-8
+Added Pin To Net: NetName=OSC32_OUT Pin=IC?-9
+Added Pin To Net: NetName=ADC3_INP9 Pin=IC?-14
+Added Pin To Net: NetName=GND Pin=IC?-16
+Added Pin To Net: NetName=VDD Pin=IC?-17
+Added Pin To Net: NetName=ADC3_INP8 Pin=IC?-18
+Added Pin To Net: NetName=ADC3_INP7 Pin=IC?-20
+Added Pin To Net: NetName=ADC3_INP6 Pin=IC?-22
+Added Pin To Net: NetName=OSC25M_IN Pin=IC?-23
+Added Pin To Net: NetName=OSC25M_OUT Pin=IC?-24
+Added Pin To Net: NetName=NRST Pin=IC?-25
+Added Pin To Net: NetName=SPI2_MOSI Pin=IC?-27
+Added Pin To Net: NetName=SDI2 Pin=IC?-28
+Added Pin To Net: NetName=VDD Pin=IC?-30
+Added Pin To Net: NetName=GND Pin=IC?-31
+Added Pin To Net: NetName=VDDA Pin=IC?-32
+Added Pin To Net: NetName=VDDA Pin=IC?-33
+Added Pin To Net: NetName=ENCA_M2 Pin=IC?-34
+Added Pin To Net: NetName=ENCB_M2 Pin=IC?-35
+Added Pin To Net: NetName=PWM_M2 Pin=IC?-36
+Added Pin To Net: NetName=PWM_M1 Pin=IC?-37
+Added Pin To Net: NetName=GND Pin=IC?-38
+Added Pin To Net: NetName=VDD Pin=IC?-39
+Added Pin To Net: NetName=SCLK1 Pin=IC?-41
+Added Pin To Net: NetName=ENCA_M3 Pin=IC?-42
+Added Pin To Net: NetName=SDI1 Pin=IC?-43
+Added Pin To Net: NetName=ADC2_INP8 Pin=IC?-45
+Added Pin To Net: NetName=ADC2_INP9 Pin=IC?-46
+Added Pin To Net: NetName=ADC1_INP5 Pin=IC?-47
+Added Pin To Net: NetName=ADC1_INP6 Pin=IC?-50
+Added Pin To Net: NetName=GND Pin=IC?-51
+Added Pin To Net: NetName=VDD Pin=IC?-52
+Added Pin To Net: NetName=ADC2_INP6 Pin=IC?-54
+Added Pin To Net: NetName=ENCA_M1 Pin=IC?-60
+Added Pin To Net: NetName=GND Pin=IC?-61
+Added Pin To Net: NetName=VDD Pin=IC?-62
+Added Pin To Net: NetName=ENCB_M1 Pin=IC?-64
+Added Pin To Net: NetName=SPI4_MISO Pin=IC?-66
+Added Pin To Net: NetName=SPI4_MOSI Pin=IC?-67
+Added Pin To Net: NetName=SCLK2 Pin=IC?-69
+Added Pin To Net: NetName=VDD Pin=IC?-71
+Added Pin To Net: NetName=VDD Pin=IC?-72
+Added Pin To Net: NetName=UART5_RX Pin=IC?-73
+Added Pin To Net: NetName=UART5_TX Pin=IC?-74
+Added Pin To Net: NetName=LED3_R Pin=IC?-75
+Added Pin To Net: NetName=TIM12_CH2 Pin=IC?-76
+Added Pin To Net: NetName=STLK_RX Pin=IC?-77
+Added Pin To Net: NetName=STLK_TX Pin=IC?-78
+Added Pin To Net: NetName=ENCA_M4 Pin=IC?-81
+Added Pin To Net: NetName=ENCB_M4 Pin=IC?-82
+Added Pin To Net: NetName=GND Pin=IC?-83
+Added Pin To Net: NetName=VDD Pin=IC?-84
+Added Pin To Net: NetName=USB_PowerSwitchOn Pin=IC?-91
+Added Pin To Net: NetName=USB_OverCurrent Pin=IC?-92
+Added Pin To Net: NetName=GND Pin=IC?-94
+Added Pin To Net: NetName=VDD Pin=IC?-95
+Added Pin To Net: NetName=ENCB_M3 Pin=IC?-97
+Added Pin To Net: NetName=PWM_M3 Pin=IC?-98
+Added Pin To Net: NetName=PWM_M4 Pin=IC?-99
+Added Pin To Net: NetName=USB_SOF(TP1) Pin=IC?-100
+Added Pin To Net: NetName=USB_VBUS Pin=IC?-101
+Added Pin To Net: NetName=USB_ID Pin=IC?-102
+Added Pin To Net: NetName=USB_DM Pin=IC?-103
+Added Pin To Net: NetName=USB_DP Pin=IC?-104
+Added Pin To Net: NetName=SWDIO Pin=IC?-105
+Added Pin To Net: NetName=VDD Pin=IC?-106
+Added Pin To Net: NetName=GND Pin=IC?-107
+Added Pin To Net: NetName=VDD Pin=IC?-108
+Added Pin To Net: NetName=USB_VBUS Pin=R?-2
+Change Net Name : Old Net Name=NetC3_1 New Net Name=NetC?_1
+Change Net Name : Old Net Name=NetD1_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD2_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD3_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD4_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD5_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD7_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD8_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetD9_1 New Net Name=NetD?_1
+Change Net Name : Old Net Name=NetIC2_2 New Net Name=NetIC?_2
+Change Net Name : Old Net Name=NetIC2_8 New Net Name=NetIC?_8
+Change Net Name : Old Net Name=NetIC2_9 New Net Name=NetIC?_9
+Change Net Name : Old Net Name=NetIC2_10 New Net Name=NetIC?_10
+Change Net Name : Old Net Name=NetIC2_11 New Net Name=NetIC?_11
+Change Net Name : Old Net Name=NetIC4_1 New Net Name=NetIC?_1
+Change Net Name : Old Net Name=NetIC4_2 New Net Name=NetIC?_2
+Change Net Name : Old Net Name=NetIC4_4 New Net Name=NetIC?_4
+Change Net Name : Old Net Name=NetIC4_5 New Net Name=NetIC?_5
+Change Net Name : Old Net Name=NetIC4_6 New Net Name=NetIC?_6
+Change Net Name : Old Net Name=NetIC4_7 New Net Name=NetIC?_7
+Change Net Name : Old Net Name=NetIC4_9 New Net Name=NetIC?_9
+Change Net Name : Old Net Name=NetIC4_10 New Net Name=NetIC?_10
+Change Net Name : Old Net Name=NetLS1_1 New Net Name=NetLS?_1
+Change Net Name : Old Net Name=NetLS1_2 New Net Name=NetLS?_2
+Change Net Name : Old Net Name=NetP8_2 New Net Name=NetP?_2
+Change Net Name : Old Net Name=NetP9_2 New Net Name=NetP?_2
+Change Net Name : Old Net Name=NetP17_2 New Net Name=NetP?_2
+Change Net Name : Old Net Name=NetT1_1 New Net Name=NetT?_1
+Added Member To Class: ClassName=Logic ICs Member=Component C? 100nF
+Added Member To Class: ClassName=Logic ICs Member=Component D? 150060VS55040
+Added Member To Class: ClassName=STM32H7 Member=Component IC? STM32H743ZIT6
+Added Member To Class: ClassName=STM32H7 Member=Component IC? STM32H743ZIT6
+Added Member To Class: ClassName=STM32H7 Member=Component IC? STM32H743ZIT6
+Added Member To Class: ClassName=Connectors Member=Component P? USB Micro AB
+Added Member To Class: ClassName=Connectors Member=Component R? 470R

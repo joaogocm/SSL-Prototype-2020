@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=USB_VBUS Pin=R22-2
+Added Component: Designator=IC5(SOT-223)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-223-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "LD1117"; VariantName = "[No Variations]"
+Added Component: Designator=P8(HEADER 2X1 MALE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr Nr"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P9(HEADER 2X1 MALE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr Nr"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P11(HEADER 2X1 MALE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr Nr"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P12(HEADER 2X1 MALE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr Nr"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P8-1
+Added Pin To Net: NetName=NetP8_2 Pin=P8-2
+Added Pin To Net: NetName=GND Pin=P9-1
+Added Pin To Net: NetName=NetP9_2 Pin=P9-2
+Added Pin To Net: NetName=GND Pin=P11-1
+Added Pin To Net: NetName=ADC3_INP8 Pin=P11-2
+Added Pin To Net: NetName=GND Pin=P12-1
+Added Pin To Net: NetName=ADC3_INP7 Pin=P12-2
+Added Pin To Net: NetName=USB_VBUS Pin=R22-2
+Change Net Name : Old Net Name=DM New Net Name=USB_N
+Change Net Name : Old Net Name=DM_ESD New Net Name=USB_ESD_N
+Change Net Name : Old Net Name=DP New Net Name=USB_P
+Change Net Name : Old Net Name=DP_ESD New Net Name=USB_ESD_P
+Added Differential Pair: Name=USB_ESD
+Added Differential Pair: Name=USB
+Added Member To Class: ClassName=Connectors Member=Component IC5 LD1117S33CTR
+Added Member To Class: ClassName=Connectors Member=Component P8 2X1
+Added Member To Class: ClassName=Connectors Member=Component P9 2X1
+Added Member To Class: ClassName=Connectors Member=Component P11 2X1
+Added Member To Class: ClassName=Connectors Member=Component P12 2X1

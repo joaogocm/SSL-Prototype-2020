@@ -1,0 +1,45 @@
+Removed Pin From Net: NetName=OSC32_OUT Pin=C12-1
+Removed Pin From Net: NetName=GND Pin=C12-2
+Removed Pin From Net: NetName=PWM_D Pin=IC8-76
+Removed Pin From Net: NetName=ADC3_INP9 Pin=P10-1
+Removed Pin From Net: NetName=USB_VBUS Pin=R22-2
+Removed Member From Class: ClassName=STM32H7 Member=C12
+Removed Member From Class: ClassName=STM32H7 Member=Y2
+Added Component: Designator=C?(CAP CER 0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Dimensions"; Value = "0603 (1608 metric)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "C0603C120J5GAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "SMD Comm C0G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "12pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=IC5(SOT-223)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-223-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "LD1117"; VariantName = "[No Variations]"
+Added Component: Designator=Y?(XTAL-200X120)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ESR"; Value = "90 kOhms"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "32.768 kHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Load Capacitance"; Value = "9 pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr"; Value = "ABRACON"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mfr Nr"; Value = "ABS06-32.768KHZ-9-T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2 mm x 1.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "ABS06"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20 PPM"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OSC32_OUT Pin=C?-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=USB_VBUS Pin=R22-2
+Added Pin To Net: NetName=OSC32_IN Pin=Y?-1
+Added Pin To Net: NetName=OSC32_OUT Pin=Y?-2
+Added Pin To Net: NetName=ADC1_INP5 Pin=IC8-47
+Added Net: Name=ADC1_INP5
+Added Pin To Net: NetName=TIM12_CH2 Pin=IC8-76
+Added Net: Name=TIM12_CH2
+Added Pin To Net: NetName=VCAP Pin=P10-1
+Added Net: Name=VCAP
+Added Member To Class: ClassName=STM32H7 Member=Component C? 12pF
+Added Member To Class: ClassName=Connectors Member=Component IC5 LD1117S33CTR
+Added Member To Class: ClassName=STM32H7 Member=Component Y? XTAL
