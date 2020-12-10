@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=CHIP_KICK_SIGNAL Pin=P5-15
-Removed Pin From Net: NetName=CHIP_KICK_SIGNAL Pin=P5-16
-Removed Pin From Net: NetName=KICK_SIGNAL Pin=P5-17
-Removed Pin From Net: NetName=KICK_SIGNAL Pin=P5-18
-Added Pin To Net: NetName=KICK_SIGNAL Pin=P5-15
-Added Pin To Net: NetName=KICK_SIGNAL Pin=P5-16
-Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P5-17
-Added Pin To Net: NetName=CHIP_KICK_SIGNAL Pin=P5-18
-Added Member To Class: ClassName=SSL-2020-PowerBoard1 Member=Component P8 12X2

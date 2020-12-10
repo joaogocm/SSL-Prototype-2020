@@ -1,8 +1,0 @@
-Removed Pin From Net: NetName=USB_VBUS Pin=R22-2
-Added Component: Designator=IC5(SOT-223)
-Add component. Clean all parameters for all variants
-Add component (AddParameter): Name = "Mfr"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Package"; Value = "SOT-223-3"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Series"; Value = "LD1117"; VariantName = "[No Variations]"
-Added Pin To Net: NetName=USB_VBUS Pin=R22-2
-Added Member To Class: ClassName=Connectors Member=Component IC5 LD1117S33CTR
