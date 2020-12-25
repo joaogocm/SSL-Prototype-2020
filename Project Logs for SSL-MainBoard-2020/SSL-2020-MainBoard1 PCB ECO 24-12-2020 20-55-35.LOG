@@ -1,0 +1,8 @@
+Added Member To Class: ClassName=Logic ICs Member=Component R18 1K
+Added Room: Name=Connectors
+Added Room: Name=Logic ICs
+Added Room: Name=STM32H7
+Added Rule: Name=Schematic Differential Pairs Routing
+Added Rule: Name=Schematic Differential Pairs Routing_1
+Added Rule: Name=Schematic Differential Pairs Routing_2
+Added Rule: Name=Schematic Differential Pairs Routing_3

@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=USART2_GPIO Pin=IC8-70
+Added Pin To Net: NetName=LED3_R Pin=P13 - RPI-4
+Change Net Name : Old Net Name=GPIO7 New Net Name=UART4_GPIO
+Change Net Name : Old Net Name=LED3_R New Net Name=UART5_INT
+Change Net Name : Old Net Name=USART2_GPIO New Net Name=UART5_GPIO

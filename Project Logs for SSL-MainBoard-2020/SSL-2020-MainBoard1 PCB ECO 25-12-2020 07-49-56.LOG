@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=USART1_INT Pin=IC8-110
+Change Net Name : Old Net Name=USART1_INT New Net Name=UART4_INT
+Added Rule: Name=Schematic Differential Pairs Routing
+Added Rule: Name=Schematic Differential Pairs Routing_1
+Added Rule: Name=Schematic Differential Pairs Routing_2
+Added Rule: Name=Schematic Differential Pairs Routing_3
